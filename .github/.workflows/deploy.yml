@@ -36,11 +36,10 @@ jobs:
       - name: Upload GitHub Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: frontend/dist
+          path: dist   # ✅ FIXED
 
   deploy:
     needs: build
-
     runs-on: ubuntu-latest
 
     permissions:
@@ -55,5 +54,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        
         
