@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+  --primary-color: #6366f1;
+  --secondary-color: #f3f4f6;
+  --border-color: #e5e7eb;
+}
+
+.dark {
+  --bg-color: #0f172a;
+  --text-color: #f9fafb;
+  --primary-color: #818cf8;
+  --secondary-color: #1e293b;
+  --border-color: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* Buttons */
+.btn {
+  @apply px-5 py-2 rounded-lg font-medium;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Cards */
+.card {
+  @apply rounded-2xl p-5 shadow-lg;
+  background-color: var(--secondary-color);
+}
+
+/* Inputs */
+.input {
+  @apply w-full px-4 py-3 rounded-xl outline-none;
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.input:focus {
+  border-color: var(--primary-color);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  display: block;
+}
